@@ -1,0 +1,10 @@
+matplotlib
+seaborn 
+numpy
+pandas
+# tenjsorflowsdc
+
+
+## local package installation 
+
+-e . ### to install local packages defined in setup.py
