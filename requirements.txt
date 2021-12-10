@@ -2,7 +2,7 @@ matplotlib
 seaborn 
 numpy
 pandas
-# tenjsorflowsdc
+tensorflow
 
 
 ## local package installation 
