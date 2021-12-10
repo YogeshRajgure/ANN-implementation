@@ -1,6 +1,6 @@
 import os
 from os import read
-from yaml import parse
+#from yaml import parse
 from src.utils.model import create_model, save_model, save_plot
 from src.utils.common import read_config
 from src.utils.data_management import get_data
@@ -15,7 +15,7 @@ def training(config_path):
 
     LOSS_FUNCTION = config["params"]["loss_function"]
     OPTIMIZER = config["params"]["optimizer"]
-    METRICS = config["params"]["merrics"]
+    METRICS = config["params"]["metrics"]
     NUM_CLASSES = config["params"]["no_classes"]
 
     model = create_model(LOSS_FUNCTION, OPTIMIZER, METRICS, NUM_CLASSES)
@@ -34,7 +34,7 @@ def training(config_path):
 
     artifacts_dir = config['artifacts']['artifacts_dir']
 
-    model_name = config['artifatcs']['model_name']
+    model_name = config['artifacts']['model_name']
     model_dir = config['artifacts']['model_dir']
 
     plot_dir = config['artifacts']['plot_dir']
@@ -56,5 +56,5 @@ if __name__ == "__main__":
 
     parsed_args = args.parse_args()
 
-    print(parsed_args)
-    #training(config_path=parsed_args.config)
+    #print(parsed_args)
+    training(config_path = parsed_args.config)
