@@ -1,4 +1,4 @@
-import tensorboard as tf
+import tensorflow as tf
 
 def get_data(validation_datasize):
 
